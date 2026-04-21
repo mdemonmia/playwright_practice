@@ -12,6 +12,7 @@ test('drag and drop',async({page})=>{
 
     //approch 2
 
+    await drag.waitFor({ state: 'visible' })
     await drag.dragTo(drop)
 
     await page.waitForTimeout(5000)
