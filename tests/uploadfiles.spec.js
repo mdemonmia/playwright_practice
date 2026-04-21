@@ -7,7 +7,7 @@ test('handled single upload files',async({page})=>{
     await page.waitForTimeout(5000)
 })
 
-test.only('multiple upload files', async({page})=>{
+test('multiple upload files', async({page})=>{
     await page.goto('https://testautomationpractice.blogspot.com/')
     await page.locator('#multipleFilesInput').setInputFiles(['tests/uploadFiles/Emon_SQA_Intern_CSE_DIU.pdf',
                                                                 'tests/uploadFiles/nid.pdf'])

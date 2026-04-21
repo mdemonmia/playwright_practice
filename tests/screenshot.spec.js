@@ -9,7 +9,7 @@ test('full page screenshot',async({page})=>{
     await page.screenshot({path: 'tests/screenshots/'+Date.now()+'fullpage.png', fullpage:'true'})
 })
 
-test.only('element page screenshot',async({page})=>{
+test('element page screenshot',async({page})=>{
     await page.goto('https://demoblaze.com/index.html')
     await page.locator('#login2').click()
     await page.locator('#loginusername').fill('Emon')

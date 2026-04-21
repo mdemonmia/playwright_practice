@@ -1,6 +1,6 @@
 const{test,expect}=require('@playwright/test')
 
-test.skip('Simple alert handle',async({page})=>{
+test('Simple alert handle',async({page})=>{
     await page.goto('https://testautomationpractice.blogspot.com/')
 
     page.on('dialog', async dialog=>{
@@ -14,7 +14,7 @@ test.skip('Simple alert handle',async({page})=>{
     await page.waitForTimeout(5000)
 })
 
-test.skip('confirm alert handle',async({page})=>{
+test('confirm alert handle',async({page})=>{
     await page.goto('https://testautomationpractice.blogspot.com/')
     page.on('dialog',async dialog=>{
         expect(dialog.type()).toContain('confirm')

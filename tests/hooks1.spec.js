@@ -1,6 +1,6 @@
 const{test,expect}=require('@playwright/test')
 
-test.skip('handle hook1',async({page})=>{
+test('handle hook1',async({page})=>{
     await page.goto('https://demoblaze.com/index.html')
 
     //login
