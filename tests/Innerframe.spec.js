@@ -10,7 +10,7 @@ test('Handle inner frames',async({page})=>{
 
    const child_frame=parent_frame.childFrames()
    console.log('number of child_frame is:',child_frame.length)
-   await child_frame[0].locator("//*[@id='i6']/div[3]/div").check()
+   await child_frame[0].locator("//*[@id='i6']/div[3]/div").click();
 
 
     await page.waitForTimeout(5000)

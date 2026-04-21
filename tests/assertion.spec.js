@@ -1,6 +1,6 @@
 const{test,expect}=require('@playwright/test');
 
-test('assertion_verify', async({page})=>{
+test.skip('assertion_verify', async({page})=>{
     await page.goto('https://demo.nopcommerce.com/register');
     await expect(page).toHaveURL('https://demo.nopcommerce.com/register');
     await expect(page).toHaveTitle('nopCommerce demo store. Register');

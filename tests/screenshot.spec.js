@@ -15,5 +15,6 @@ test('element page screenshot',async({page})=>{
     await page.locator('#loginusername').fill('Emon')
     await page.locator('#loginpassword').fill('test@123')
     await page.locator("//button[normalize-space()='Log in']").click()
+    await page.waitForTimeout(2000);
     await page.locator("//*[@id='logInModal']/div").screenshot({path: 'tests/screenshots/'+Date.now()+'element.png'})
 })
