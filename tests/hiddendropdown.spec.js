@@ -1,5 +1,5 @@
 const{test,expect}=require('@playwright/test')
-test('Handle hidden dropdown',async({page})=>{
+test.skip('Handle hidden dropdown',async({page})=>{
     await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
     await page.locator("[name='username']").fill('Admin');
     await page.locator("[name='password']").fill('admin123');

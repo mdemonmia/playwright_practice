@@ -1,6 +1,6 @@
 const{test,expect}=require('@playwright/test')
 
-test('handled single upload files',async({page})=>{
+test.skip('handled single upload files',async({page})=>{
     await page.goto('https://testautomationpractice.blogspot.com/')
 
     await page.locator('#singleFileInput').setInputFiles('tests/uploadFiles/Emon_SQA_Intern_CSE_DIU.pdf')

@@ -16,6 +16,7 @@ test.afterAll(async()=>{
 })
 
 test('test home page',async()=>{
+    await page.waitForSelector('.hrefch') 
     const products=await page.$$('.hrefch')
     expect(products).toHaveLength(9)
 })
