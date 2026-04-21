@@ -1,0 +1,18 @@
+const{test,expect}=require('@playwright/test')
+test('Mouse hover action', async({page})=>{
+    // await page.goto('https://testautomationpractice.blogspot.com/')
+    // const pointme=await page.locator("//button[normalize-space()='Point Me']")
+    // const laptops=await page.locator("//a[normalize-space()='Laptops']")
+    // await pointme.hover()
+    // await laptops.click()
+
+    await page.goto('https://demoqa.com/menu')
+    const mainitem=await page.locator("//a[normalize-space()='Main Item 2']")
+    const sublist=await page.locator("//a[normalize-space()='SUB SUB LIST »']")
+    const sublistoption=await page.locator("//a[normalize-space()='Sub Sub Item 2']")
+    await mainitem.hover()
+    await sublist.hover()
+    await sublistoption.click()
+
+    await page.waitForTimeout(5000)
+})
