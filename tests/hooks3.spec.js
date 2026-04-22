@@ -17,8 +17,8 @@ test.afterAll(async()=>{
 
 test('test home page',async()=>{
     await page.waitForSelector('.hrefch') 
-    const products=await page.$$('.hrefch')
-    expect(products).toHaveLength(9)
+    const products = page.locator('.hrefch')
+    await expect(products).toHaveCount(9)
 })
 
 test('add to cart test',async()=>{

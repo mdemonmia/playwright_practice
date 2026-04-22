@@ -11,9 +11,9 @@ test('Mouse hover action', async({page})=>{
     const sublist=await page.locator("//a[normalize-space()='SUB SUB LIST »']")
     const sublistoption=await page.locator("//a[normalize-space()='Sub Sub Item 2']")
     await mainitem.hover()
-    await page.waitForTimeout(500) 
+    await sublist.waitFor({ state: 'visible' }) // ✅ visible হওয়া পর্যন্ত অপেক্ষা
     await sublist.hover()
-    await page.waitForTimeout(500) 
+    await sublistoption.waitFor({ state: 'visible' }) // ✅ visible হওয়া পর্যন্ত অপেক্ষা
     await sublistoption.click()
 
     await page.waitForTimeout(5000)
