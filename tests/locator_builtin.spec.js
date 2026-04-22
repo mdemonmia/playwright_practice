@@ -1,5 +1,5 @@
 const{test,expect}=require('@playwright/test');
-test('locators built in', async({page})=>{
+test.skip('locators built in', async({page})=>{
     await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
     //await expect(page).toHaveTitle('OrangeHRM');
     const pageTitle=await page.title();

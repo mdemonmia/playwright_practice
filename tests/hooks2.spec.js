@@ -12,6 +12,7 @@ test.beforeEach(async({page})=>{
 })
 
 test.afterEach(async({page})=>{
+    await page.locator('#logout2').waitFor({ state: 'visible' });
     await page.locator('#logout2').click()
 })
 
