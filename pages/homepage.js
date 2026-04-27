@@ -1,4 +1,4 @@
-exports.HomePage=class homePage{
+exports.HomePage=class HomePage{
     constructor(page){
         this.page=page
         this.allProduct='#tbodyid div h4 a'
