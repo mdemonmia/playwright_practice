@@ -10,7 +10,7 @@ test('test2',async({page})=>{
     await expect(page).toHaveTitle('nopCommerce demo store. Home page title');
 })
 
-test('test3',async({page})=>{
+test.only('test3',async({page})=>{
     await page.goto('https://testautomationpractice.blogspot.com/');
     await expect(page).toHaveTitle('Automation Testing Practice');
 })

@@ -23,7 +23,8 @@ test.only('multiple window handles', async()=>{
     const context=await browser.newContext();
 
     const page1=await context.newPage();
-    await page1.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",{ waitUntil: 'networkidle' });
+    await page1.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
+        ,{ waitUntil: 'networkidle' });
     await expect(page1).toHaveTitle("OrangeHRM")
 
     const pagepromise=context.waitForEvent('page');
